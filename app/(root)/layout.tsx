@@ -1,10 +1,16 @@
+import Header from '@/components/Header'
 import React from 'react'
 
-function layout({children}: {children: React.ReactNode}) {
+function layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      {children}
-    </div>
+    <main className='min-h-screen text-gray-400'>
+
+      {/* we add header here */}
+    <Header/>
+      <div className='container py-10'>
+        {children}
+      </div>
+    </main>
   )
 }
 

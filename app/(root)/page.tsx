@@ -1,9 +1,12 @@
+import { Button } from '@/components/ui/button'
 import React from 'react'
 
 //root -- home page folder
 const page = () => {
   return (
-    <div>page</div>
+    <div className='flex min-h-screen home-wrapper'>
+      home
+    </div>
   )
 }
 
