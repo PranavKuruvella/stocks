@@ -16,7 +16,7 @@ if (!cached) {
   cached = global.mongooseCache = { conn: null, promise: null }
 }
 
-export const connectDB = async () => {
+export const connectToDatabase = async () => {
 
   if (!MONGODB_URI) {
     throw new Error("Please add your Mongo URI to .env.local");
@@ -33,4 +33,7 @@ export const connectDB = async () => {
     throw e;
   }
   console.log("DB connected");
+
+
+  return cached.conn
 }
