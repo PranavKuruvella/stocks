@@ -15,7 +15,7 @@ import { LogOut } from "lucide-react";
 import NavItems from "@/components/NavItems";
 // import {signOut} from "@/lib/actions/auth.actions";
 
-const UserDropdown = () => {
+const UserDropdown = ({user}: {user: User}) => {
   const router = useRouter();
 
   const handleSignOut = async () => {
@@ -23,10 +23,10 @@ const UserDropdown = () => {
     router.push("/sign-in");
   }
 
-  const user = {
-    name: "Shanmukh Pranav",
-    email: "shanmukhpranav@gmail.com",
-  }
+  // const user = {
+  //   name: "Shanmukh Pranav",
+  //   email: "shanmukhpranav@gmail.com",
+  // }
 
   return (
     <DropdownMenu>
