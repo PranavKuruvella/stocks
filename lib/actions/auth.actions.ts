@@ -44,18 +44,18 @@ export const signUpWithEmail = async ({ email, password, fullName, country, inve
 }
 
 export const signOut = async () => {
-try {
-  await auth.api.signOut({
-    headers: await headers()
-  })
+  try {
+    await auth.api.signOut({
+      headers: await headers()
+    })
 
-} catch (error) {
-  console.log(`Signup failed: ${error}`)
-  return {
-    success: false,
-    message: "Failed to sign up"
+  } catch (error) {
+    console.log(`Signup failed: ${error}`)
+    return {
+      success: false,
+      message: "Failed to sign up"
+    }
   }
-}
 }
 
 
