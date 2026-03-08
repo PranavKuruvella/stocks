@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 //this is a component that will be used to display the tradingview widget -- taken from tradingview docs
 interface TradingViewWidgetProps {
-  title: string;
+  title?: string;
   scriptUrl: string;
   config: Record<string, unknown>;
   height?: number;
